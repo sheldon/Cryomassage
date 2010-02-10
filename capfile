@@ -24,10 +24,10 @@ set :branch,      "master"
 set :deploy_to,   "."
 set :databases,   ["#{application}"]
 set :aliases,     ["www.app_name.com"]
-set :phpwax,      "master"
-set :cms,         "v2"
-set :github_login "oneblackbear"
-set :github_token "95b81a0da635bc4a6da86a046e7c8b08"
+set :phpwax,      "v3"
+set :cms,         "v4"
+set :github_login, "oneblackbear"
+set :github_token, "95b81a0da635bc4a6da86a046e7c8b08"
 
 # =============================================================================
 # CUSTOM TASKS
