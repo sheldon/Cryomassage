@@ -1,0 +1,52 @@
+html{
+  background:#750600;
+}
+body{
+  color:#fff;
+  font-family:'Droid Sans',arial,sans-serif;
+  text-align:left;
+}
+a{
+  color:#fff;
+  text-decoration:none;
+}
+a:hover{
+  text-decoration:underline;
+}
+.site-width{
+  width:900px;
+  margin:0 auto;
+}
+
+#header, #top-nav{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#header h1, #header h2{
+  float:left;
+  font-size:220%;
+}
+#header h3{
+  float:left;
+  clear:left;
+}
+#top-nav a{
+  font-size:182%;
+  float:left;
+  padding:5px 20px;
+}
+#top-nav a.first{
+  padding-left:0;
+}
+#top-nav a.last{
+  padding-right:0;
+}
+#languages{
+  float:right;
+}
+#languages li{
+  display:inline;
+}
+#languages li a{
+  padding:5px;
+}

@@ -7,6 +7,8 @@
  * Use to provide application wide methods
  **/
 
-class ApplicationController extends WaxController{}
+class ApplicationController extends CMSApplicationController{
+	public $languages = array(0=>"english", 1=>"polish");
+}
 
 ?>

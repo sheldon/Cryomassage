@@ -1,0 +1,5 @@
+<ul id="top-nav" class="site-width clearfix">
+  <?foreach($sects as $i => $sect):?>
+  <li><a href="<?=$sect->permalink()?>" class="<?=$i==0?"first":""?><?=$i==(count($sects)-1)?"last":""?>"><?=$sect->title?></a></li>
+  <?endforeach?>
+</ul>

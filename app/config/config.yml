@@ -14,11 +14,10 @@
 # == Database configuration ==
 development:
  db:
-  dbtype: none
+  dbtype: mysql
   host: localhost
-  database: app_development
+  database: cryomassage
   username: root
-  password: secret
 
 test:
   db:
