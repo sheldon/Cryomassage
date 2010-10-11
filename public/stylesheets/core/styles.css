@@ -1,5 +1,5 @@
 html{
-  background:#750600;
+  background:#5b0500 url(/images/shadow-slice.gif) top center repeat-y;
 }
 body{
   color:#fff;
@@ -7,20 +7,27 @@ body{
   text-align:left;
 }
 a{
-  color:#fff;
+  color:#ff8673;
   text-decoration:none;
 }
 a:hover{
   text-decoration:underline;
+  color:#ffb7ac;
+}
+strong{
+  font-weight:bold;
 }
 .site-width{
+  background:#750600;  
   width:900px;
+  padding-left:20px;
+  padding-right:20px;
   margin:0 auto;
 }
 
 #header, #top-nav{
-  margin-top:10px;
-  margin-bottom:10px;
+  padding-top:10px;
+  padding-bottom:10px;
 }
 #header h1, #header h2{
   float:left;
@@ -29,11 +36,17 @@ a:hover{
 #header h3{
   float:left;
   clear:left;
+  font-size:116%;
 }
 #top-nav a{
   font-size:182%;
   float:left;
   padding:5px 20px;
+  margin-bottom:20px;
+  color:#fff;
+}
+#top-nav a:hover{
+  color:#ffb7ac;
 }
 #top-nav a.first{
   padding-left:0;
@@ -49,4 +62,47 @@ a:hover{
 }
 #languages li a{
   padding:5px;
+}
+
+.homepage-col{
+  float:left;
+  width:265px;
+  padding:0 17px 20px;
+  border-right:1px solid #ffb7ac;
+}
+.homepage-col.last{
+  border-right:none;
+}
+.homepage-col h2{
+  text-align:center;
+  font-size:182%;
+  margin-bottom:10px;
+}
+
+.main-content h1{
+  font-size:182%;
+  margin-bottom:20px;
+}
+.main-content h2{
+  font-size:153.9%;
+}
+.main-content h3{
+  font-size:138.5%;
+}
+.main-content h4{
+  font-size:123.1%;
+}
+.main-content p{
+  margin:10px 0;
+  font-size:108%;
+}
+.main-content li{
+  list-style:disc outside none;
+  font-size:116%;
+  margin-left:20px;
+}
+
+.index p{
+  margin:10px 20px 30px;
+  font-size:116%;
 }
