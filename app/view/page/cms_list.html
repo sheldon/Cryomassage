@@ -1,5 +1,5 @@
 <h1><?=$cms_section->title?></h1>
-<?=$cms_section->introduction?>
+<?=CmsTextFilter::filter("before_output", $cms_section->introduction)?>
 <ul>
 <?foreach($cms_content as $content):?>
   <li><a href="<?=$content->permalink()?>"><?=$content->title?></a></li>
