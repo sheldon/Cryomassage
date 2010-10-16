@@ -17,9 +17,13 @@ class PageController extends ApplicationController{
     
     if(($this->results = $this->bookingform->save()) && !$_POST['dontfillthisin']){
       $email = new WaxEmail;
-      $email->add_to_address("sheldon.els@gmail.com", "sheldon");
-      $email->add_bcc_address("pawel@cryomassage.co.uk", "pawel");
-      $email->subject = "New booking from website";
+      $email->from = "pawel@cryomassage.co.uk";
+      $email->from_name = "CryoMassage Website";
+      $email->add_to_address("pawel@cryomassage.co.uk", "pawel");
+      $email->add_to_address("cryomassage@gmail.com", "pawel");
+      $email->add_to_address("ciecier2@poczta.onet.pl", "pawel");
+      $email->add_bcc_address("sheldon.els@gmail.com", "sheldon");
+      $email->subject = "New booking from CryoMassage website - ".$this->results["name"];
       $email->body = "Details from the form:\n";
       foreach ($this->results as $key => $val) $email->body .= "\n$key : $val";
       $email->send();
