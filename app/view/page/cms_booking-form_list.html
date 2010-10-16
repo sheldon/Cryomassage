@@ -1,8 +1,8 @@
-<?=CmsTextFilter::filter("before_output", $cms_section->introduction)?>
-
 <?if($this->results):?>
   <p>Thank you for your booking. We'll get back to you shortly.</p>
 <?else:?>
+  <?=CmsTextFilter::filter("before_output", $cms_section->introduction)?>
+  
   <form method="post" action="">
     <fieldset>
       <?foreach($bookingform as $el):?>
