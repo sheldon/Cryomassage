@@ -1,0 +1,15 @@
+<?=CmsTextFilter::filter("before_output", $cms_section->introduction)?>
+
+<?if($this->results):?>
+  <p>Thank you for your booking. We'll get back to you shortly.</p>
+<?else:?>
+  <form method="post" action="">
+    <fieldset>
+      <?foreach($bookingform as $el):?>
+        <?=$el->render()?>
+      <?endforeach?>
+      <label class="dontfillthisin" for="dontfillthisin">Please don't fill this in</label><input class="dontfillthisin text_field" type="text" name="dontfillthisin" value="" id="dontfillthisin"/>
+      <input type="submit" class="input_field submit_field" value="Place Booking" name="Submit"/>
+    </fieldset>
+  </form>
+<?endif?>

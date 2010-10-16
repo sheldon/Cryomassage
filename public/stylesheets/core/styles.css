@@ -109,3 +109,23 @@ strong{
   margin:10px 20px 30px;
   font-size:116%;
 }
+
+label{
+  float:left;
+  clear:left;
+  width:150px;
+  margin:10px 0 10px 200px;
+}
+input.text_field{
+  float:left;
+  width:300px;
+  margin:10px 0;
+}
+input.submit_field{
+  float:left;
+  clear:left;
+  margin:10px 0 10px 350px;
+}
+.dontfillthisin{
+  display:none;
+}
