@@ -45,6 +45,9 @@ strong{
   margin-bottom:20px;
   color:#fff;
 }
+#top-nav a.selected{
+  color:#ffb7ac;
+}
 #top-nav a:hover{
   color:#ffb7ac;
 }
