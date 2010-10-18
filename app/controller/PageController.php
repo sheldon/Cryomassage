@@ -12,8 +12,15 @@ class PageController extends ApplicationController{
     $this->sects = $this->sects->roots();
 
     $this->bookingform = new WaxForm;
-    $this->bookingform->add_element("name", "TextInput");
-    $this->bookingform->add_element("email_address", "TextInput");
+
+    $this->bookingform->add_element("name", "TextInput", array("validations"=>array("required"), "label"=>"Name *"));
+    $this->bookingform->add_element("address", "TextInput", array("validations"=>array("required"), "label"=>"Address *"));
+    $this->bookingform->add_element("postcode", "TextInput", array("validations"=>array("required"), "label"=>"Postcode *"));
+    $this->bookingform->add_element("date_and_time", "TextInput", array("validations"=>array("required"), "label"=>"Date and Time *"));
+    $this->bookingform->add_element("type_of_massage", "SelectInput", array("validations"=>array("required"), "label"=>"Type of Massage *", "choices"=>array(""=>"","Relaxation Massage"=>"Relaxation Massage", "Sport Massage"=>"Sport Massage", "Remedial Massage"=>"Remedial Massage", "Other"=>"Other")));
+    $this->bookingform->add_element("length_of_appointment", "SelectInput", array("validations"=>array("required"), "label"=>"Length of Appointment *", "choices"=>array(""=>"","30 Minutes"=>"30 Minutes", "60 Minutes"=>"60 Minutes", "90 Minutes"=>"90 Minutes", "Over 90 Minutes"=>"Over 90 Minutes")));
+    $this->bookingform->add_element("contact_telephone_number", "TextInput", array("validations"=>array("required"), "label"=>"Contact Telephone Number *"));
+    $this->bookingform->add_element("additional_information", "TextareaInput", array("label"=>"Additional Information"));
     
     if(($this->results = $this->bookingform->save()) && !$_POST['dontfillthisin']){
       $email = new WaxEmail;

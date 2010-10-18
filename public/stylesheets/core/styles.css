@@ -116,7 +116,7 @@ label{
   width:150px;
   margin:10px 0 10px 200px;
 }
-input.text_field{
+input.text_field, select, textarea{
   float:left;
   width:300px;
   margin:10px 0;
@@ -125,6 +125,12 @@ input.submit_field{
   float:left;
   clear:left;
   margin:10px 0 10px 350px;
+}
+form span.error_message{
+  clear:left;
+  color:#7777FF;
+  float:left;
+  margin-left:350px;
 }
 .dontfillthisin{
   display:none;
