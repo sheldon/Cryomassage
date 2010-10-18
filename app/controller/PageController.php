@@ -29,6 +29,10 @@ class PageController extends ApplicationController{
       $email->send();
     }
   }
-  public function index(){}
+  
+  public function index(){
+    $this->homepage = new CmsContent("published");
+    $this->homepage = $this->homepage->filter("title","Homepage")->first();
+  }
 }
 ?>
