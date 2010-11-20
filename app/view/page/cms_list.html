@@ -2,7 +2,7 @@
 <?if(count($cms_content)):?>
   <ul>
   <?foreach($cms_content as $content):?>
-    <li><a href="<?=$content->permalink()?>"><?=$content->title?></a></li>
+    <li><a href="<?=$content->permalink()?>"><?=$content->title?></a> - <?=smart_truncate($content->content, 10)?></li>
   <?endforeach?>
   </ul>
 <?endif?>

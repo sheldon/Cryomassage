@@ -101,8 +101,10 @@ strong{
 }
 .main-content li{
   list-style:disc outside none;
-  font-size:116%;
   margin-left:20px;
+}
+.main-content li a{
+  font-size:150%;
 }
 
 .index p{
