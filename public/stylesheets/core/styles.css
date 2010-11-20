@@ -137,3 +137,6 @@ form span.error_message{
 .dontfillthisin{
   display:none;
 }
+.homepage-col img:hover{
+  border:1px solid #ffb7ac;
+}
