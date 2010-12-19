@@ -1,0 +1,13 @@
+<?if(count($nodes) || count($pages)):?>
+  <ul>
+    <?foreach($nodes as $node):?>
+      <li>
+        <a href="<?=$node->permalink()?>"<?=in_array($node->id, $selected_nodes)?'class="selected"':''?>><?=$node->title?></a>
+        <?=partial("_side_nav", array("nodes"=>$node->children, "pages"=>CmsContent::find("all",array("filter"=>array("status"=>1,"cms_section_id"=>$node->id))), "selected_nodes"=>$selected_nodes))?>
+      </li>
+    <?endforeach?>
+    <?foreach($pages as $node):?>
+      <li><a href="<?=$node->permalink()?>"<?=$cms_content->id==$node->id?'class="selected"':''?>><?=$node->title?></a></li>
+    <?endforeach?>
+  </ul>
+<?endif?>

@@ -9,7 +9,20 @@
 <body>
   <?=partial("_header", $this)?>
   <div class="site-width main-content <?=$action?>">
-    <?=$content_for_layout?>
+    <?if($cms_section && ($root_section = $cms_section->path_from_root[0])){
+      $pages = new CmsContent("published");
+      $pages->filter("cms_section_id", $root_section->id);
+      if($default_page = $root_section->default_page) $pages->filter("cms_section_id", $default_page->id);
+      $pages = $pages->all();
+      $selected_nodes = array();
+      foreach ($cms_section->path_from_root as $node) $selected_nodes[] = $node->id;
+    }else $pages = array();?>
+    <div id="side_nav">
+      <?=$side_nav = partial("_side_nav", array("nodes"=>$cms_section->path_from_root[0]->children,"pages"=>$pages,"cms_content"=>$cms_content,"selected_nodes"=>$selected_nodes))?>
+    </div>
+    <div id="content_holder" <?=$side_nav?'class="content_holder_with_nav"':''?>>
+      <?=$content_for_layout?>
+    </div>
   </div>
   <?=partial("_footer")?>
 <script src="http://www.google.com/jsapi"></script>
