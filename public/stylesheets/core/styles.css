@@ -82,6 +82,9 @@ strong{
   margin-bottom:10px;
 }
 
+.main-content{
+  background:#750600 url(/images/watermark.gif) center top no-repeat;
+}
 .main-content h1{
   font-size:182%;
   margin-bottom:20px;
