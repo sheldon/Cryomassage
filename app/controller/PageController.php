@@ -34,5 +34,7 @@ class PageController extends ApplicationController{
     $this->homepage = new CmsContent("published");
     $this->homepage = $this->homepage->filter("title","Homepage")->first();
   }
+
+  public function bookings(){}
 }
 ?>
