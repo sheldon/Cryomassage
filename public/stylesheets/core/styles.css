@@ -177,3 +177,9 @@ form span.error_message{
 #side_nav li li li li li a{padding-left:40px;}
 #side_nav li li li li li li a{padding-left:50px;}
 #side_nav li li li li li li li a{padding-left:60px;}
+
+#bookings_iframe{
+  width:100%;
+  border:none;
+  height:1000px;
+}
