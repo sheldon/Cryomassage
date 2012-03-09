@@ -4,7 +4,7 @@ class PageController extends ApplicationController{
     $this->cms();
 
     $this->sects = new CmsSection;
-    $this->sects = $this->sects->roots();
+    $this->sects = $this->sects->roots()->order("date_modified")->all();
 
     $this->bookingform = new WaxForm;
 
